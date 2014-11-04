@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var catsAge: UITextField!
+    @IBOutlet var message: UILabel!
+    
+    @IBAction func button(sender: AnyObject) {
+        var age = catsAge.text.toInt()
+        age = age! * 7
+        println(catsAge.text)
+        
+        message.text = "Your cat is \(age!) years old."
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
